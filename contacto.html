@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <title>Contacto - Tutorías Académicas</title>
+</head>
+
+<body class="wrapper">
+    <header>
+        <nav id="navegacion-principal">
+            <h1 id="titulo-principal">Tutorías Académicas</h1>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acerca.html">Sobre el sistema</a></li>
+                <li><a href="servicios.html">Funcionalidades</a></li>
+                <li><a href="registroalumno.html">Tutorías</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contenedor">
+            <h1>Contacto</h1>
+            <p>¿Tienes dudas sobre el sistema de tutorías, agendamiento o seguimiento académico? Estamos aquí para ayudarte.</p>
+        </section>
+
+        <section class="contenedor">
+            <h2>Envíanos un mensaje</h2>
+            <form id="formulario-contacto">
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="(123) 456-7890">
+                </div>
+                <div class="campo-formulario">
+                    <label for="asunto">Asunto:</label>
+                    <select id="asunto" name="asunto">
+                        <option value="">Selecciona un tema</option>
+                        <option value="registro">Registro y acceso</option>
+                        <option value="agenda">Agendamiento de tutorías</option>
+                        <option value="seguimiento">Seguimiento académico</option>
+                        <option value="feedback">Retroalimentación</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="campo-formulario">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-enviar">Enviar mensaje</button>
+            </form>
+        </section>
+
+        <section class="contenedor">
+            <h2>Información de soporte</h2>
+            <div id="info-contacto">
+                <div class="tarjeta tarjeta-gato">
+                    <h3>Correo electrónico</h3>
+                    <p><strong>Soporte:</strong> soporte@tutoriasacademicas.com</p>
+                    <p><strong>Registro:</strong> registro@tutoriasacademicas.com</p>
+                </div>
+                <div class="tarjeta tarjeta-gato">
+                    <h3>Teléfonos</h3>
+                    <p><strong>Atención general:</strong> (555) 123-4567</p>
+                    <p><strong>Soporte técnico:</strong> (555) 987-6543</p>
+                </div>
+                <div class="tarjeta tarjeta-gato">
+                    <h3>Horario de atención</h3>
+                    <p>Lunes a Viernes: 9:00 AM - 7:00 PM</p>
+                    <p>Sábados: 10:00 AM - 3:00 PM</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor">
+            <h2>Preguntas frecuentes</h2>
+            <div class="tarjeta">
+                <h3>¿Cómo agendo una tutoría?</h3>
+                <p>Regístrate, selecciona tu materia y docente, luego elige un horario disponible en el calendario.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>¿Puedo ver el historial de mis sesiones?</h3>
+                <p>Sí, el sistema guarda el registro de las tutorías, los temas y los acuerdos de cada sesión.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>¿Cómo recibo retroalimentación?</h3>
+                <p>Después de cada sesión, el docente puede cargar comentarios y sugerencias que estarán disponibles en tu panel.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tutorías Académicas. Todos los derechos reservados.</p>
+        <p>Soporte para la coordinación de tutorías entre estudiantes y docentes.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,520 @@
+﻿/* ============================================
+   ESTILOS EXTERNOS - Sistema de Tutorías Académicas
+   ============================================ */
+
+/* --- Selectores de Etiqueta --- */
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e8f1fb 0%, #f6fbff 50%, #f3f9f8 100%);
+    color: #0f172a;
+}
+
+header {
+    background-color: #1d4e89;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+main {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    color: #1d3557;
+    text-align: left;
+}
+
+a {
+    color: #1d4e89;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1661a0;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #1d4e89;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.05em;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 15px 0;
+}
+
+ul, ol {
+    margin: 15px 0;
+    padding-left: 40px;
+}
+
+li {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #dbe2ef;
+}
+
+th {
+    background-color: #1d4e89;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #eef4fb;
+}
+
+tr:hover {
+    background-color: #dbe9f6;
+}
+
+/* --- Selectores de Clase --- */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-gato {
+    border-left: 5px solid #1d4e89;
+}
+
+.tarjeta-adopcion {
+    border-left: 5px solid #1661a0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #1d4e89;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn:hover {
+    background-color: #1661a0;
+}
+
+.btn-enviar {
+    background-color: #198754;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-enviar:hover {
+    background-color: #146c43;
+}
+
+.imagen-responsive {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.imagen-centrada {
+    display: block;
+    margin: 20px auto;
+}
+
+.galeria-gatos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.galeria-gatos img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.galeria-gatos img:hover {
+    transform: scale(1.05);
+}
+
+.lista-gatos {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-gatos li {
+    background-color: #eef4fb;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #1d4e89;
+}
+
+.lista-gatos li:hover {
+    background-color: #dbe9f6;
+}
+
+/* --- Selectores de ID --- */
+#navegacion-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#titulo-principal {
+    font-size: 2.8em;
+    color: white;
+    margin: 0;
+}
+
+#navegacion-principal ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navegacion-principal a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#navegacion-principal a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#formulario-contacto {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#seccion-bienvenida {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+header {
+    background-color: #1d4e89;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+article {
+    flex: 3;
+    min-width: 280px;
+    border: 2px solid #a8dadc;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.92);
+}
+
+article section {
+    border: 2px solid #f1faee;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+aside {
+    flex: 1;
+    min-width: 240px;
+    border: 2px solid #a8dadc;
+    border-radius: 16px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.95);
+    height: fit-content;
+}
+
+.aside-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.presentacion h2 {
+    margin-top: 0;
+}
+
+.servicios-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.imagen-aside {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+}
+
+a.btn {
+    display: inline-block;
+    background-color: #1d4e89;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+a.btn:hover {
+    background-color: #1661a0;
+    border-color: #a8dadc;
+}
+
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+    #navegacion-principal {
+        justify-content: center;
+    }
+    article, aside {
+        min-width: 100%;
+    }
+}
+
+#bienvenida {
+    background: linear-gradient(135deg, #1d4e89 0%, #3f7fbf 100%);
+    color: white;
+    padding: 50px 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#bienvenida h1 {
+    color: white;
+}
+
+#bienvenida p {
+    color: white;
+    text-align: center;
+}
+
+/* --- Selectores de Atributo --- */
+a[href] {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a[href]:hover {
+    color: #ffe8e8;
+}
+
+a[href="index.html"] {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #a8dadc;
+    border-radius: 10px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #1d4e89;
+    outline: none;
+    box-shadow: 0 0 5px rgba(29, 78, 137, 0.3);
+}
+
+input[required],
+textarea[required] {
+    border-left: 4px solid #1d4e89;
+}
+
+input[placeholder],
+textarea[placeholder] {
+    color: #6c757d;
+}
+
+/* --- Selectores Combinadores --- */
+nav > ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav > ul > li {
+    display: inline-block;
+}
+
+nav a {
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    margin: 5px;
+    background-color: #146eb4;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0f5a8b;
+    transform: scale(1.05);
+}
+
+h2 + p {
+    font-style: italic;
+    color: #666;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Selectores de Pseudoclase --- */
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: #ffe8e8;
+}
+
+a:hover {
+    color: #dbe9f6;
+}
+
+a:active {
+    color: #b3d1eb;
+}
