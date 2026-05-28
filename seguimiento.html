@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="stylesheet" href="CSS/seguimiento.css">
+    <title>Seguimiento y Retroalimentación - Tutorías Académicas</title>
+</head>
+
+<body class="wrapper">
+    <header>
+        <nav id="navegacion-principal">
+            <h1 id="titulo-principal">Tutorías Académicas</h1>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acerca.html">Sobre el sistema</a></li>
+                <li><a href="servicios.html">Funcionalidades</a></li>
+                <li><a href="registroalumno.html">Tutorías</a></li>
+                <li><a href="seguimiento.html">Seguimiento</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="login.html" class="btn-nav-login">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="seguimiento-main">
+        <section class="contenedor seguimiento-header">
+            <h1>Mi Seguimiento Académico</h1>
+            <p>Consulta tu progreso, visualiza tus sesiones de tutoría y revisa la retroalimentación de tus docentes.</p>
+        </section>
+
+        <div class="seguimiento-container">
+            <!-- Resumen de Progreso -->
+            <section class="contenedor resumen-progreso">
+                <h2>Resumen de Progreso</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon sessions">📚</div>
+                        <div class="stat-info">
+                            <h3>Sesiones Completadas</h3>
+                            <p class="stat-number">12</p>
+                            <small>en los últimos 30 días</small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon progress">📈</div>
+                        <div class="stat-info">
+                            <h3>Avance General</h3>
+                            <p class="stat-number">75%</p>
+                            <small>de objetivos cumplidos</small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon feedback">⭐</div>
+                        <div class="stat-info">
+                            <h3>Calificación Promedio</h3>
+                            <p class="stat-number">8.5/10</p>
+                            <small>en retroalimentación</small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon upcoming">📅</div>
+                        <div class="stat-info">
+                            <h3>Próximas Sesiones</h3>
+                            <p class="stat-number">3</p>
+                            <small>programadas</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Historial de Sesiones -->
+            <section class="contenedor historial-sesiones">
+                <h2>Historial de Sesiones</h2>
+                
+                <div class="filtros-sesiones">
+                    <input type="text" id="buscar-sesion" placeholder="Buscar por materia o docente..." class="filtro-input">
+                    <select id="filtro-materia" class="filtro-select">
+                        <option value="">Todas las materias</option>
+                        <option value="matematica">Matemática</option>
+                        <option value="historia">Historia</option>
+                        <option value="ingles">Inglés</option>
+                        <option value="programacion">Programación</option>
+                    </select>
+                </div>
+
+                <div class="sesiones-list">
+                    <!-- Sesión 1 -->
+                    <div class="sesion-item">
+                        <div class="sesion-header">
+                            <h3>Matemática - Cálculo Diferencial</h3>
+                            <span class="sesion-fecha">28 de Mayo, 2026</span>
+                        </div>
+                        <div class="sesion-info">
+                            <p><strong>Docente:</strong> Prof. Carlos García</p>
+                            <p><strong>Duración:</strong> 60 minutos</p>
+                            <p><strong>Estado:</strong> <span class="estado-completada">Completada</span></p>
+                        </div>
+                        <div class="sesion-objetivos">
+                            <strong>Objetivos cubiertos:</strong>
+                            <ul>
+                                <li>Derivadas parciales</li>
+                                <li>Regla de la cadena</li>
+                                <li>Aplicaciones prácticas</li>
+                            </ul>
+                        </div>
+                        <button class="btn-ver-feedback" data-sesion="1">Ver Retroalimentación</button>
+                    </div>
+
+                    <!-- Sesión 2 -->
+                    <div class="sesion-item">
+                        <div class="sesion-header">
+                            <h3>Inglés - Escritura Académica</h3>
+                            <span class="sesion-fecha">26 de Mayo, 2026</span>
+                        </div>
+                        <div class="sesion-info">
+                            <p><strong>Docente:</strong> Prof. María López</p>
+                            <p><strong>Duración:</strong> 45 minutos</p>
+                            <p><strong>Estado:</strong> <span class="estado-completada">Completada</span></p>
+                        </div>
+                        <div class="sesion-objetivos">
+                            <strong>Objetivos cubiertos:</strong>
+                            <ul>
+                                <li>Estructura de ensayos</li>
+                                <li>Citaciones APA</li>
+                            </ul>
+                        </div>
+                        <button class="btn-ver-feedback" data-sesion="2">Ver Retroalimentación</button>
+                    </div>
+
+                    <!-- Sesión 3 -->
+                    <div class="sesion-item">
+                        <div class="sesion-header">
+                            <h3>Programación - Python Avanzado</h3>
+                            <span class="sesion-fecha">24 de Mayo, 2026</span>
+                        </div>
+                        <div class="sesion-info">
+                            <p><strong>Docente:</strong> Prof. Juan Martínez</p>
+                            <p><strong>Duración:</strong> 90 minutos</p>
+                            <p><strong>Estado:</strong> <span class="estado-completada">Completada</span></p>
+                        </div>
+                        <div class="sesion-objetivos">
+                            <strong>Objetivos cubiertos:</strong>
+                            <ul>
+                                <li>Programación orientada a objetos</li>
+                                <li>Manejo de excepciones</li>
+                                <li>Proyecto final</li>
+                            </ul>
+                        </div>
+                        <button class="btn-ver-feedback" data-sesion="3">Ver Retroalimentación</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Retroalimentación Modal -->
+            <div id="modal-retroalimentacion" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2>Retroalimentación de la Sesión</h2>
+                    
+                    <div id="contenido-retroalimentacion">
+                        <!-- Se llena dinámicamente con JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dejar Retroalimentación -->
+            <section class="contenedor dejar-retroalimentacion">
+                <h2>Dejar Retroalimentación</h2>
+                <p>Ayúdanos a mejorar compartiendo tu experiencia y comentarios sobre las sesiones de tutoría.</p>
+
+                <form id="formulario-retroalimentacion" class="formulario-feedback">
+                    <div class="form-group">
+                        <label for="sesion-select">Sesión:</label>
+                        <select id="sesion-select" name="sesion" required>
+                            <option value="">Selecciona una sesión</option>
+                            <option value="1">Matemática - 28 de Mayo</option>
+                            <option value="2">Inglés - 26 de Mayo</option>
+                            <option value="3">Programación - 24 de Mayo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="calificacion">Calificación (1-10):</label>
+                        <div class="rating-group">
+                            <input type="range" id="calificacion" name="calificacion" min="1" max="10" value="5">
+                            <span id="valor-calificacion">5</span>/10
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aspectos">¿Qué aspectos fueron más útiles?</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="aspectos" value="contenido"> El contenido fue claro</label>
+                            <label><input type="checkbox" name="aspectos" value="metodologia"> La metodología fue efectiva</label>
+                            <label><input type="checkbox" name="aspectos" value="docente"> El docente fue atento</label>
+                            <label><input type="checkbox" name="aspectos" value="tiempo"> El tiempo fue suficiente</label>
+                            <label><input type="checkbox" name="aspectos" value="recursos"> Los recursos fueron útiles</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentarios">Comentarios adicionales:</label>
+                        <textarea 
+                            id="comentarios" 
+                            name="comentarios" 
+                            placeholder="Comparte tus comentarios, sugerencias o áreas de mejora..."
+                            rows="5"
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-enviar-feedback">Enviar Retroalimentación</button>
+                </form>
+            </section>
+
+            <!-- Progreso por Materia -->
+            <section class="contenedor progreso-materia">
+                <h2>Progreso por Materia</h2>
+                
+                <div class="progress-cards">
+                    <div class="progress-card">
+                        <h3>Matemática</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                        <div class="progress-info">
+                            <span class="progress-text">85% completado</span>
+                            <span class="progress-temas">8 temas cubiertos</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-card">
+                        <h3>Inglés</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 70%"></div>
+                        </div>
+                        <div class="progress-info">
+                            <span class="progress-text">70% completado</span>
+                            <span class="progress-temas">5 temas cubiertos</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-card">
+                        <h3>Programación</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                        <div class="progress-info">
+                            <span class="progress-text">90% completado</span>
+                            <span class="progress-temas">12 temas cubiertos</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-card">
+                        <h3>Historia</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                        <div class="progress-info">
+                            <span class="progress-text">60% completado</span>
+                            <span class="progress-temas">4 temas cubiertos</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tutorías Académicas. Todos los derechos reservados.</p>
+        <p>Plataforma para coordinar tutorías con agendamiento, seguimiento y retroalimentación.</p>
+    </footer>
+
+    <script src="js/seguimiento.js"></script>
+</body>
+
+</html>

@@ -1,8 +1,12 @@
 ﻿/* ============================================
-   ESTILOS EXTERNOS - Sistema de Tutorías Académicas
+   ESTILOS EXTERNOS - Sistema de Tutorías Académicas - MEJORADO
    ============================================ */
 
 /* --- Selectores de Etiqueta --- */
+* {
+    box-sizing: border-box;
+}
+
 body {
     height: 100%;
     margin: 0;
@@ -30,11 +34,12 @@ footer {
 
 main {
     display: flex;
+    flex-direction: column;
     gap: 30px;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex: 1;
-    padding: 30px;
+    padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
@@ -43,7 +48,10 @@ main {
 
 h1, h2, h3 {
     color: #1d3557;
-    text-align: left;
+}
+
+.contenedor > h2 {
+    text-align: center;
 }
 
 a {
@@ -64,10 +72,12 @@ h1 {
 
 h2 {
     font-size: 2em;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     border-bottom: 3px solid #1d4e89;
     display: inline-block;
     padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
 }
 
 h3 {
@@ -128,9 +138,10 @@ tr:hover {
 }
 
 .contenedor {
+    width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 30px;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -273,6 +284,17 @@ tr:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+.btn-nav-login {
+    background-color: #198754 !important;
+    border-radius: 25px !important;
+    padding: 8px 18px !important;
+    font-weight: 600 !important;
+}
+
+.btn-nav-login:hover {
+    background-color: #157347 !important;
+}
+
 #formulario-contacto {
     background-color: white;
     padding: 30px;
@@ -343,17 +365,24 @@ aside {
 }
 
 .servicios-lista {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
 }
 
 .card {
     background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
+    border: 2px solid #dbe9f6;
     border-radius: 12px;
-    padding: 18px;
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: #1d4e89;
 }
 
 .imagen-aside {
@@ -383,6 +412,7 @@ a.btn:hover {
 @media (max-width: 900px) {
     main {
         flex-direction: column;
+        padding: 20px 10px;
     }
     #navegacion-principal {
         justify-content: center;
@@ -390,23 +420,37 @@ a.btn:hover {
     article, aside {
         min-width: 100%;
     }
+    .contenedor {
+        padding: 25px 20px;
+    }
+    .servicios-lista {
+        grid-template-columns: 1fr;
+    }
 }
 
 #bienvenida {
     background: linear-gradient(135deg, #1d4e89 0%, #3f7fbf 100%);
     color: white;
-    padding: 50px 30px;
+    padding: 60px 40px;
     border-radius: 15px;
     text-align: center;
+    width: 100%;
 }
 
 #bienvenida h1 {
     color: white;
+    margin-top: 0;
 }
 
 #bienvenida p {
-    color: white;
+    color: rgba(255, 255, 255, 0.95);
     text-align: center;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+#bienvenida .btn {
+    margin-top: 20px;
 }
 
 /* --- Selectores de Atributo --- */
